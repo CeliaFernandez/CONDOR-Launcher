@@ -14,7 +14,7 @@ now = datetime.now()
 time = now.strftime("%y%m%d_%H%M%S")
 
 # Global paths:
-global workdir 
+global workdir # absolute path to THIS script
 workdir = os.path.dirname(os.path.abspath(__main__.__file__))
 
 global logpath
@@ -25,9 +25,9 @@ logpath = workdir + '/' + 'logs/'
 ##-  Init  -##
 ##############
 
-if not os.path.exists('logs'): os.makedirs('logs')
-if not os.path.exists('bashFiles'): os.makedirs('bashFiles')
-if not os.path.exists('condorFiles'): os.makedirs('condorFiles')
+if not os.path.exists(workdir + '/logs'): os.makedirs(workdir + '/logs')
+if not os.path.exists(workdir + '/bashFiles'): os.makedirs(workdir + '/bashFiles')
+if not os.path.exists(workdir + '/condorFiles'): os.makedirs(workdir + '/condorFiles')
 
 
 ###################

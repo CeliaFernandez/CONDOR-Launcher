@@ -38,5 +38,12 @@ Usage example:
 toCONDOR espresso python my/python/file/prueba.py
 ```
 
+or:
+
+```
+toCONDOR espresso python $PWD/prueba.py
+```
+
+
 Important: The path to the script we want to run e.g. prueba.py, must be an absolute path.
 
